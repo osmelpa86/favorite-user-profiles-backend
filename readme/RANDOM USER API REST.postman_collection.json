@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "7a020df1-7b08-4430-9ab4-e8d96d31406a",
+		"name": "FirmaE USER API REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "validate nickname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/firmae/v1/profiles/N1-0908/exist",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"firmae",
+						"v1",
+						"profiles",
+						"N1-0908",
+						"exist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "receive favorite profiles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nickname\": \"N1-0901\",\r\n  \"favorites\": [\r\n    {\r\n      \"gender\": \"female\",\r\n      \"name\": {\r\n        \"title\": \"Mrs\",\r\n        \"first\": \"Magdalena\",\r\n        \"last\": \"Herrera\"\r\n      },\r\n      \"location\": {\r\n        \"street\": {\r\n          \"number\": 8453,\r\n          \"name\": \"Avenida de Castilla\"\r\n        },\r\n        \"city\": \"San Sebastián\",\r\n        \"state\": \"Comunidad Valenciana\",\r\n        \"country\": \"Spain\",\r\n        \"postcode\": 50837,\r\n        \"coordinates\": {\r\n          \"latitude\": \"85.4353\",\r\n          \"longitude\": \"34.5577\"\r\n        },\r\n        \"timezone\": {\r\n          \"offset\": \"-5:00\",\r\n          \"description\": \"Eastern Time (US & Canada), Bogota, Lima\"\r\n        }\r\n      },\r\n      \"email\": \"magdalena.herrera@example.com\",\r\n      \"dob\": {\r\n        \"date\": \"1982-06-29T07:44:32.410Z\",\r\n        \"age\": 39\r\n      },\r\n      \"registered\": {\r\n        \"date\": \"2015-10-18T23:51:08.930Z\",\r\n        \"age\": 6\r\n      },\r\n      \"phone\": \"943-468-448\",\r\n      \"cell\": \"605-687-942\",\r\n      \"picture\": {\r\n        \"large\": \"https://randomuser.me/api/portraits/men/66.jpg\",\r\n        \"medium\": \"https://randomuser.me/api/portraits/med/men/66.jpg\",\r\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/66.jpg\"\r\n      },\r\n      \"nat\": \"ES\",\r\n      \"favorite\":true\r\n    },\r\n    {\r\n      \"gender\": \"male\",\r\n      \"name\": {\r\n        \"title\": \"Mr\",\r\n        \"first\": \"Guillermo\",\r\n        \"last\": \"Cruz\"\r\n      },\r\n      \"location\": {\r\n        \"street\": {\r\n          \"number\": 4465,\r\n          \"name\": \"Calle Covadonga\"\r\n        },\r\n        \"city\": \"Lorca\",\r\n        \"state\": \"Navarra\",\r\n        \"country\": \"Spain\",\r\n        \"postcode\": 62231,\r\n        \"coordinates\": {\r\n          \"latitude\": \"74.8581\",\r\n          \"longitude\": \"-112.0739\"\r\n        },\r\n        \"timezone\": {\r\n          \"offset\": \"+3:00\",\r\n          \"description\": \"Baghdad, Riyadh, Moscow, St. Petersburg\"\r\n        }\r\n      },\r\n      \"email\": \"guillermo.cruz@example.com\",\r\n      \"dob\": {\r\n        \"date\": \"1969-12-24T00:39:00.074Z\",\r\n        \"age\": 52\r\n      },\r\n      \"registered\": {\r\n        \"date\": \"2010-06-18T02:04:00.116Z\",\r\n        \"age\": 11\r\n      },\r\n      \"phone\": \"931-640-447\",\r\n      \"cell\": \"626-368-960\",\r\n      \"picture\": {\r\n        \"large\": \"https://randomuser.me/api/portraits/women/55.jpg\",\r\n        \"medium\": \"https://randomuser.me/api/portraits/med/women/55.jpg\",\r\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/women/55.jpg\"\r\n      },\r\n      \"nat\": \"ES\",\r\n      \"favorite\":true\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8081/firmae/v1/profiles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"firmae",
+						"v1",
+						"profiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get profile by nickname",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nickname\": \"N1-0901\",\r\n  \"favorites\": [\r\n    {\r\n      \"gender\": \"female\",\r\n      \"name\": {\r\n        \"title\": \"Mrs\",\r\n        \"first\": \"Magdalena\",\r\n        \"last\": \"Herrera\"\r\n      },\r\n      \"location\": {\r\n        \"street\": {\r\n          \"number\": 8453,\r\n          \"name\": \"Avenida de Castilla\"\r\n        },\r\n        \"city\": \"San Sebastián\",\r\n        \"state\": \"Comunidad Valenciana\",\r\n        \"country\": \"Spain\",\r\n        \"postcode\": 50837,\r\n        \"coordinates\": {\r\n          \"latitude\": \"85.4353\",\r\n          \"longitude\": \"34.5577\"\r\n        },\r\n        \"timezone\": {\r\n          \"offset\": \"-5:00\",\r\n          \"description\": \"Eastern Time (US & Canada), Bogota, Lima\"\r\n        }\r\n      },\r\n      \"email\": \"magdalena.herrera@example.com\",\r\n      \"dob\": {\r\n        \"date\": \"1982-06-29T07:44:32.410Z\",\r\n        \"age\": 39\r\n      },\r\n      \"registered\": {\r\n        \"date\": \"2015-10-18T23:51:08.930Z\",\r\n        \"age\": 6\r\n      },\r\n      \"phone\": \"943-468-448\",\r\n      \"cell\": \"605-687-942\",\r\n      \"nat\": \"ES\"\r\n    },\r\n    {\r\n      \"gender\": \"male\",\r\n      \"name\": {\r\n        \"title\": \"Mr\",\r\n        \"first\": \"Guillermo\",\r\n        \"last\": \"Cruz\"\r\n      },\r\n      \"location\": {\r\n        \"street\": {\r\n          \"number\": 4465,\r\n          \"name\": \"Calle Covadonga\"\r\n        },\r\n        \"city\": \"Lorca\",\r\n        \"state\": \"Navarra\",\r\n        \"country\": \"Spain\",\r\n        \"postcode\": 62231,\r\n        \"coordinates\": {\r\n          \"latitude\": \"74.8581\",\r\n          \"longitude\": \"-112.0739\"\r\n        },\r\n        \"timezone\": {\r\n          \"offset\": \"+3:00\",\r\n          \"description\": \"Baghdad, Riyadh, Moscow, St. Petersburg\"\r\n        }\r\n      },\r\n      \"email\": \"guillermo.cruz@example.com\",\r\n      \"dob\": {\r\n        \"date\": \"1969-12-24T00:39:00.074Z\",\r\n        \"age\": 52\r\n      },\r\n      \"registered\": {\r\n        \"date\": \"2010-06-18T02:04:00.116Z\",\r\n        \"age\": 11\r\n      },\r\n      \"phone\": \"931-640-447\",\r\n      \"cell\": \"626-368-960\",\r\n      \"nat\": \"ES\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8081/firmae/v1/profiles/N1-0907",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"firmae",
+						"v1",
+						"profiles",
+						"N1-0907"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
