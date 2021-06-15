@@ -1,0 +1,2 @@
+# favorite-user-profiles-backend
+En este ejercicio se desarrolló un servicio para compartir perfiles de usuarios favoritos, los cuales se almacenan en memoria usando `H2` junto con su nickname, para que luego puedan ser consultados por un nickname. Se documentó la API REST con `Open API Swagger` y los endpoints fueron probados con `Postman`,  adicionalmente se implementaron pruebas automatizadas con `JUnit` para corroborar el correcto funcionamiento del microservicio.
